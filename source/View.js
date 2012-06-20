@@ -4,12 +4,12 @@ enyo.kind({
 	classes: "view",
 	published: {
 		headerComponents: [],
-		toolbarComponents: []
+		footerComponents: []
 	},
 	create: function() {
 		this.inherited(arguments);
 		this.$.headerComponents.resized();
-		this.$.toolbarComponents.resized();
+		this.$.footerComponents.resized();
 	},
 	initComponents: function() {
 		var owner = this.getInstanceOwner();
@@ -31,8 +31,8 @@ enyo.kind({
 	},
 	toolbarComponentsChanged: function() {
 		var owner = this.getInstanceOwner();
-		this.$.toolbarComponents.destroyClientControls();
-		this.$.toolbarComponents.createComponents(this.toolbarComponents, {owner: owner});
-		this.$.toolbarComponents.resized();
+		this.$.footerComponents.destroyClientControls();
+		this.$.footerComponents.createComponents(this.footerComponents, {owner: owner});
+		this.$.footerComponents.resized();
 	}
 });

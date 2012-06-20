@@ -11,7 +11,7 @@ enyo.kind({
 		
 		this.createChrome([
 			{name: "headerComponents", isChrome: true},
-			{name: "client", fit: true, classes: "client", isChrome: true},
+			{kind: enyo.FittableRows, name: "client", fit: true, classes: "client", isChrome: true},
 			{name: "footerComponents", isChrome: true}
 		]);
 

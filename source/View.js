@@ -1,5 +1,5 @@
 enyo.kind({
-	name: "com.sugardave.View",
+	name: "sugardave.View",
 	kind: enyo.FittableRows,
 	classes: "view",
 	published: {

@@ -1,6 +1,6 @@
 enyo.kind({
 	name: "View",
-	kind: "com.sugardave.View"
+	kind: "sugardave.View"
 });
 
 enyo.kind({

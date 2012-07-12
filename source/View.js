@@ -15,10 +15,10 @@ enyo.kind({
 			{name: "footerComponents", isChrome: true}
 		]);
 
-		this.$.headerComponents.createComponents(this.headerComponents, {owner: owner});
+		this.$.headerComponents.createComponents(this.headerComponents, {owner: this});
 		this.$.headerComponents.resized();
 		
-		this.$.footerComponents.createComponents(this.footerComponents, {owner: owner});
+		this.$.footerComponents.createComponents(this.footerComponents, {owner: this});
 		this.$.footerComponents.resized();
 		
 		this.inherited(arguments);
@@ -26,13 +26,13 @@ enyo.kind({
 	headerComponentsChanged: function() {
 		var owner = this.getInstanceOwner();
 		this.$.headerComponents.destroyClientControls();
-		this.$.headerComponents.createComponents(this.headerComponents, {owner: owner});
+		this.$.headerComponents.createComponents(this.headerComponents, {owner: this});
 		this.$.headerComponents.resized();
 	},
-	toolbarComponentsChanged: function() {
+	footerComponentsChanged: function() {
 		var owner = this.getInstanceOwner();
 		this.$.footerComponents.destroyClientControls();
-		this.$.footerComponents.createComponents(this.footerComponents, {owner: owner});
+		this.$.footerComponents.createComponents(this.footerComponents, {owner: this});
 		this.$.footerComponents.resized();
 	}
 });
